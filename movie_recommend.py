@@ -422,9 +422,9 @@ def movie_grid(items, key_prefix, is_tmdb=True, cols_per_row=5):
         st.markdown("<br>", unsafe_allow_html=True)
 
 
-# ══════════════════════════════════════════════════════════════════════════════
+
 # LOGIN / REGISTER PAGE
-# ══════════════════════════════════════════════════════════════════════════════
+
 if not st.session_state.logged_in:
 
     with st.sidebar:
@@ -482,9 +482,9 @@ if not st.session_state.logged_in:
     st.stop()
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-# SIDEBAR  (shown when logged in)
-# ══════════════════════════════════════════════════════════════════════════════
+
+# Sidebar  (shown when logged in)
+
 with st.sidebar:
     st.image(logo, use_container_width=True)
     st.markdown("<br>", unsafe_allow_html=True)
@@ -513,9 +513,8 @@ with st.sidebar:
                 unsafe_allow_html=True)
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-# TOP NAVIGATION BAR
-# ══════════════════════════════════════════════════════════════════════════════
+
+# Top navigation bar
 st.markdown(
     "<div class='navbar-brand'>SYLVER MOVIES</div>"
     "<div class='navbar-sub'>CONTENT-BASED MOVIE RECOMMENDER</div>",
@@ -545,9 +544,8 @@ st.markdown("---")
 page = st.session_state.page
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-# PAGE: HOME
-# ══════════════════════════════════════════════════════════════════════════════
+
+# Home Page
 if page == "Home":
 
     # For You section
@@ -578,9 +576,7 @@ if page == "Home":
             movie_grid(list(zip(titles, ids)), key_prefix="rec", is_tmdb=False)
 
 
-# ══════════════════════════════════════════════════════════════════════════════
 # PAGE: POPULAR
-# ══════════════════════════════════════════════════════════════════════════════
 elif page == "Popular":
     st.markdown("<div class='page-title'>MOST POPULAR</div>"
                 "<div class='page-sub'>WHAT EVERYONE IS WATCHING RIGHT NOW</div>",
@@ -593,9 +589,8 @@ elif page == "Popular":
         st.warning("Could not load popular movies. Check your TMDB API key.")
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-# PAGE: TOP RATED
-# ══════════════════════════════════════════════════════════════════════════════
+
+# Top Rated page
 elif page == "Top Rated":
     st.markdown("<div class='page-title'>TOP RATED</div>"
                 "<div class='page-sub'>THE HIGHEST RATED FILMS OF ALL TIME</div>",
@@ -608,9 +603,7 @@ elif page == "Top Rated":
         st.warning("Could not load top rated movies. Check your TMDB API key.")
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-# PAGE: GENRES
-# ══════════════════════════════════════════════════════════════════════════════
+# Genre page
 elif page == "Genres":
 
     if st.session_state.genre_id is None:
@@ -650,9 +643,7 @@ elif page == "Genres":
             st.warning("No results found for this genre.")
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-# PAGE: COUNTRY
-# ══════════════════════════════════════════════════════════════════════════════
+# Country page
 elif page == "Country":
 
     COUNTRIES = [
@@ -701,9 +692,7 @@ elif page == "Country":
             st.warning("No results found for this country.")
 
 
-# ══════════════════════════════════════════════════════════════════════════════
-# PAGE: MY WATCHLIST
-# ══════════════════════════════════════════════════════════════════════════════
+# My Watchlist page
 elif page == "My Watchlist":
     st.markdown("<div class='page-title'>MY WATCHLIST</div>"
                 "<div class='page-sub'>MOVIES YOU'VE MARKED AS WATCHED</div>",
