@@ -1,5 +1,5 @@
 # FILE: movie_recommend.py
-# PURPOSE: Sylver Movies — personalised content-based movie recommendation app.
+# PURPOSE: BingeBuddy — personalised content-based movie recommendation app.
 # Run with: streamlit run movie_recommend.py
 
 import streamlit as st
@@ -14,7 +14,7 @@ import hashlib
 
 # ── Page config ────────────────────────────────────────────────────────────────
 logo = Image.open("images/SM.jpg")
-st.set_page_config(page_title="Sylver Movies", page_icon=logo, layout="wide")
+st.set_page_config(page_title="BingeBuddy", page_icon=logo, layout="wide")
 
 # ── TMDB API ───────────────────────────────────────────────────────────────────
 TMDB_API_KEY    = "f9ecf55069d2ed1f79d0326c72107435"
@@ -436,7 +436,7 @@ if not st.session_state.logged_in:
         )
 
     st.markdown(
-        "<div class='page-title'>SYLVER MOVIES</div>"
+        "<div class='page-title'>BingeBuddy</div>"
         "<div class='page-sub'>CONTENT-BASED MOVIE RECOMMENDER</div>",
         unsafe_allow_html=True
     )
@@ -516,7 +516,7 @@ with st.sidebar:
 
 # Top navigation bar
 st.markdown(
-    "<div class='navbar-brand'>SYLVER MOVIES</div>"
+    "<div class='navbar-brand'>BingeBuddy</div>"
     "<div class='navbar-sub'>CONTENT-BASED MOVIE RECOMMENDER</div>",
     unsafe_allow_html=True
 )

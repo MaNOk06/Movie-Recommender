@@ -1,4 +1,4 @@
-# Sylver Movies
+# BingeBuddy
 
 A content-based movie recommender built with Python and Streamlit. Pick any movie from the TMDB 5000 dataset and get 5 similar recommendations, with posters and metadata fetched live from the TMDB API.
 
@@ -27,7 +27,7 @@ This produces `artifacts/movie_list.pkl` and `artifacts/similarity.pkl`. Only ne
 
 Get a free key from [themoviedb.org](https://www.themoviedb.org/settings/api) and set it in `movie_recommend.py`:
 ```python
-TMDB_API_KEY = "your_key_here"
+TMDB_API_KEY = f9ecf55069d2ed1f79d0326c72107435
 ```
 
 **5. Run the app**
