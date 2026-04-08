@@ -1,4 +1,4 @@
-# BingeBuddy
+# Sylver Movies
 
 A content-based movie recommender built with Python and Streamlit. Pick any movie from the TMDB 5000 dataset and get 5 similar recommendations, with posters and metadata fetched live from the TMDB API.
 
